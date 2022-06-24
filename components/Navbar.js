@@ -11,10 +11,7 @@ export default function Navbar() {
 		</div>
 		<ul className={styles.link_items}>
 			<li>
-				<Link href="/?page=0"><a>Início</a></Link>
-			</li>
-			<li>
-				<Link href="/about"><a>Sobre</a></Link>
+				<Link href="/about"><a>About</a></Link>
 			</li>
 		</ul>
     </nav>
