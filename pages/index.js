@@ -80,8 +80,8 @@ const Home = (props) => {
 		}
 	}
 	
-	// limpar o objeto filtrado
-	const clearSearchObj = (e) => {
+	// atualiza o input value e reseta os estados relacionados à busca
+	const inputUpdate = (e) => {
 		inputRef.current = e.target.value;
 		setResponse(false)
 		setSearchObj(null)
@@ -117,10 +117,14 @@ const Home = (props) => {
 		<>	
 			<div className={styles.search_container}>
 				<br/><br/><br/><br/><br/><br/><br/>
-				<SearchInput value={inputRef.current} onChangeFunc={(e) => clearSearchObj(e)} onClickFunc={() => getCharacterByName()} />
+				<SearchInput value={inputRef.current} onChangeFunc={(e) => inputUpdate(e)} onClickFunc={() => getCharacterByName()} />
 			</div>
 
 			<br/><br/>
+			
+			<div id="wrapper-cards" className={styles.generic_container}>
+				<h6>all characters</h6>
+			</div><br/>
 			
             <div id="wrapper-cards" className={styles.generic_container}>
 				{content}            

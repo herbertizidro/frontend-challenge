@@ -27,7 +27,7 @@ export const getStaticPaths = async () => {
 //pré-processamento(gerar páginas estáticas)
 export const getStaticProps = async (context) => {
  
-  const id = context.params.itemId //para acessar os ids dos caminhos gerados em getStaticPaths
+  const id = context.params.itemId //para acessar os ids gerados em getStaticPaths
   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
   const data = await res.json()
 
@@ -54,13 +54,16 @@ export default function Character(props) {
     <div className={styles.character_container}>
       <h1 className={styles.title}>{props.characters.name}</h1>
       <br/>
-	  <Image
+
+	  <Image 
         src={props.characters.image}
         width="200"
         height="200"
         alt={props.characters.name}
+		className={styles.img_border}
       /><br/><br/>
-      <div>
+ 
+	  <div>
         <span><b>Specie:</b> {props.characters.species}</span><br/>
         <span><b>Status:</b> {props.characters.status}</span><br/>
 		<span><b>Origin:</b> {props.characters.origin.name ? props.characters.origin.name : "---"}</span><br/>
