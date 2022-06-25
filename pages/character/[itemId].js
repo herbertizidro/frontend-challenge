@@ -27,7 +27,7 @@ export const getStaticPaths = async () => {
 //pré-processamento(gerar páginas estáticas)
 export const getStaticProps = async (context) => {
  
-  const id = context.params.itemId //para acessar os ids dos caminhos gerados em getStaticPaths
+  const id = context.params.itemId //para acessar os ids gerados em getStaticPaths
   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
   const data = await res.json()
 
