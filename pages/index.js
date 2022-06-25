@@ -80,7 +80,7 @@ const Home = (props) => {
 		}
 	}
 	
-	// limpar o objeto filtrado
+	// atualiza o input value, limpa atualiza os estados relacionados à busca
 	const clearSearchObj = (e) => {
 		inputRef.current = e.target.value;
 		setResponse(false)
