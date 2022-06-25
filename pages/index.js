@@ -84,6 +84,7 @@ const Home = (props) => {
 	const clearSearchObj = (e) => {
 		inputRef.current = e.target.value;
 		setResponse(false)
+		setSearchObj(null)
 	}
 	
 	
@@ -114,14 +115,11 @@ const Home = (props) => {
     
     return (
 		<>	
-			<div className={styles.generic_container}>
-				<Image src="/images/rick-and-morty-31013.png" width="250" height="220" alt="Rick And Morty Wallpaper" />
-			</div>
-			
-			<div className={styles.generic_container}>
+			<div className={styles.search_container}>
+				<br/><br/><br/><br/><br/><br/><br/>
 				<SearchInput value={inputRef.current} onChangeFunc={(e) => clearSearchObj(e)} onClickFunc={() => getCharacterByName()} />
 			</div>
-			
+
 			<br/><br/>
 			
             <div id="wrapper-cards" className={styles.generic_container}>
