@@ -91,7 +91,7 @@ const Home = (props) => {
 	//renderização condicional dos cards de acordo com a busca
     let content = null;
     if (isLoading){
-        content = <div id="loader-full-screen"><div id="loader"><h5>Por favor, aguarde ...</h5></div></div>
+        content = <div id="loader-full-screen"><div id="loader"><h5>Please, wait a moment ...</h5></div></div>
     }else {
 		
 		if(response){ //usuário decidiu pesquisar por um personagem
