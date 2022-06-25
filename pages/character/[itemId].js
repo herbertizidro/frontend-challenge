@@ -46,7 +46,7 @@ export default function Character(props) {
   const router = useRouter()
   if(router.isFallback){
 	  return(
-		<div id="loader-full-screen"><div id="loader"><h5>Por favor, aguarde ...</h5></div></div>
+		<div id="loader-full-screen"><div id="loader"><h5>Please, wait a moment ...</h5></div></div>
 	  )
   }
   
