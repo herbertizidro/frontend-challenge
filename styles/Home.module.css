@@ -24,6 +24,15 @@
 }
 
 
+/* MOBILE */
+@media screen and (max-width: 500px){
+  .search_container{
+	background-position: center;
+  }
+}
+
+
+
 
 
 

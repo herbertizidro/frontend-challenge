@@ -46,3 +46,17 @@
 .link_items a:hover{
 	border-color: #70aa46;
 }
+
+.link_items{ 
+  display: block;
+}
+  
+/* MOBILE */
+@media screen and (max-width: 500px){
+  .link_items{ 
+	display: none;
+  }
+  .navbar{
+	justify-content: center;
+  }
+}

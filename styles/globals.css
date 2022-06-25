@@ -30,9 +30,9 @@ body{
 
 /* PAGINAÇÃO */
 #paginate{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination > li {
@@ -104,11 +104,11 @@ body{
 
 #input-search{
 	display: flex;
-	min-width: 250;
+	min-width: 220;
 	max-width: 500px;
 	width: 100%;
 	margin: 0 auto;
-	
+	padding: 5px;
 }
 
 
