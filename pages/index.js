@@ -123,7 +123,7 @@ const Home = (props) => {
 			<br/><br/>
 			
 			<div id="wrapper-cards" className={styles.generic_container}>
-				<h6>all characters</h6>
+				{!response && <h6>all characters</h6>}
 			</div><br/>
 			
             <div id="wrapper-cards" className={styles.generic_container}>
