@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true, //false - se tentar acessar http://localhost:3000/character/1050 vai receber um 404
+    fallback: true, //false - se tentar acessar um id fora do paths vai receber um 404
   }
 }
 
