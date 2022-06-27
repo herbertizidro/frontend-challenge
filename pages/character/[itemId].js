@@ -5,19 +5,16 @@ import { useRouter } from 'next/router'
 
 
 export const getStaticPaths = async () => {
-	
-  const api = "https://rickandmortyapi.com/api/character"	
-  const res = await fetch(`${api}`)
-  const data = await res.json()
   
-  // itera sobre o json
-  const paths = data.results.map((item, index) => {
-    return {
-	  //(+ 1 pra pular o índice zero)
-      params: { itemId: (index + 1).toString() },
-    }
-  })
-
+  //gerar os ids para os 100 primeiros personagens
+  const paths = [];
+  
+  for (let i = 1; i < 101; i++) {
+   paths.push({
+      params: { itemId: (i).toString() },
+    })
+  }
+  
   return {
     paths,
     fallback: true, //false - se tentar acessar um id fora do paths vai receber um 404
